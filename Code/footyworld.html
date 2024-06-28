@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FootyWorld</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: green;
+            padding: 10px;
+            overflow: hidden;
+        }
+
+        h1 {
+            float: left;
+            margin: 0;
+            font-size: 24px;
+        }
+
+        nav {
+            float: right;
+            width: 40%;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .introduction {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            font-size: 18px;
+        }
+
+        
+        .box-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .box {
+            width: 30%;
+            margin: 20px 0;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #333;
+            border-radius: 8px;
+        }
+
+        .box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .box p {
+            margin: 0;
+        }
+
+        
+        .streaming-sites {
+            margin: 20px 0;
+        }
+
+        .site {
+            margin-bottom: 20px;
+        }
+
+        .site-content {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .site-heading {
+            cursor: pointer;
+            color: #fff;
+            font-size: 20px;
+            margin-bottom: 10px;
+            text-decoration: none;
+            
+        }
+
+        .site-info,
+        .site-image {
+            width: 50%;
+            
+            box-sizing: border-box;
+            padding: 0 20px;
+        }
+
+        .site-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+       
+        @media (max-width: 768px) {
+
+            .site-info,
+            .site-image {
+                width: 100%;
+            }
+        }
+
+        
+        .history-section {
+            display: flex;
+            margin-top: 40px;
+        }
+
+        .history-rectangle {
+            width: 30%;
+            
+            box-sizing: border-box;
+            padding: 20px;
+            margin-left: 27px;
+            margin-right: 20px;
+            background-color: #333;
+            border-radius: 8px;
+            color: #fff;
+        }
+
+        .history-rectangle img {
+            max-width: 250%;
+            height: 200px;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: green;
+            color: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #streaming {
+
+            transition: all 0.3s ease;
+        }
+
+        footer #contact {
+            transition: all 0.3s ease;
+        }
+
+        .navbar {
+
+            position: sticky;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .site-image video {
+            margin-left: -23px;
+        }
+        .box-container {
+            display: flex;
+            overflow: hidden;
+            transition: transform 2s ease-in-out; 
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <h1>FootyWorld</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#streaming">STREAMING WEBSITES</a></li>
+                <li><a href="#history">HISTORY</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="introduction">
+        <p>Welcome to FOOTYWORLD! Here you will get all the latest news and updates about the game of football.</p>
+    </div>  
+
+    <div class="box-container" id="home">
+        <div class="box">
+            <img src="img1.webp" alt="Super League Logo">
+            <p>European Super League: Court rules FIFA & UEFA cannot block clubs from joining new competition. </p>
+        </div>
+
+        <div class="box">
+            <img src="img2.webp" alt="Sergi Roberto celebrating">
+            <p>Barcelona beat last placed Almeria thanks to captain Sergi Roberto's heroics. </p>
+        </div>
+
+        <div class="box">
+            <img src="images.jpeg" alt="Premier league logo" width="500">
+            <p>The top European Leagues shaping up heading into the Christmas break. Where do the top teams stand in
+                their league tables?</p>
+        </div>
+    </div>
+    <script>
+        
+        function shiftBoxes() {
+            const boxContainer = document.querySelector('.box-container');
+            const firstBox = boxContainer.querySelector('.box');
+            boxContainer.appendChild(firstBox.cloneNode(true)); 
+            boxContainer.removeChild(firstBox); 
+        }
+
+        setInterval(shiftBoxes, 5000); 
+    </script>
+
+    <div class="box-container">
+        <div class="box">
+            <img src="download.jpeg" alt="David De Gea" width="500">
+            <p>6 transfers we'd like to see in January 2024 window: Sancho, De Gea, Phillips?</p>
+        </div>
+
+        <div class="box">
+            <img src="girona.webp" alt="Girona">
+            <p>Can Girona do the unthinkable and win LaLiga? They currently sit top of Laliga with 44 points in 17
+                games. </p>
+        </div>
+
+        <div class="box">
+            <img src="img3.jpeg" alt="Vitor Roque" width="500">
+            <p>Xavi admits Vitor Roque will bring new ray of positivity and lethal striking after joining the club in
+                January. Barcelona currently have the most big chances missed in the top 5 leagues.</p>
+        </div>
+    </div>
+    <div class="box-container">
+        <div class="box">
+            <img src="img4.jpg" alt="Liverpool Vs Villa">
+            <p>Who will win the Premier League? The title race is getting heated up with Aston Villa closing in on the
+                top.</p>
+        </div>
+
+        <div class="box">
+            <img src="alaba.webp" alt="David Alaba">
+            <p>Real Madrid hit with injury crisis as David Alaba joins the list. They currently are without their main
+                centre backs and goalkeeper. Carlo Ancelotti has some thinking to do about their defensive line.</p>
+        </div>
+
+        <div class="box">
+            <img src="ucl.jpeg" alt="Ucl" width="500">
+            <p>The UCL draws have been done and there are some tasty fixtures ready for February. Manchester City,
+                Bayern and much more.</p>
+        </div>
+    </div>
+
+    <div class="box-container">
+        <div class="box">
+            <img src="miami.webp" alt="Messi Ronaldo">
+            <p>Inter Miami set to take on Al Nassr in a friendly scheduled in february as fans call it one last battle
+                between the goats.</p>
+        </div>
+
+        <div class="box">
+            <img src="download1.jpeg" alt="Barca Vs Napoli" width="500">
+            <p>Barcelona drawn against Napoli in a mouth watering clash. Araujo Vs Osimhen? Fans excited for the epic
+                duel between them. Can Barcelona and Xavi end their european drought?</p>
+        </div>
+
+        <div class="box">
+            <img src="grizi.jpg" alt="Griezmann">
+            <p>Antoine Griezmann becomes Atletico Madrid's all time top scorer.</p>
+        </div>
+    </div>
+
+    
+    <div class="box-container"
+        style="background-color: #333; border-radius: 8px; padding: 10px;margin-right: 20px;margin-left: 20px;">
+        <center>
+            <h1 id="streaming" style="color: white;">Football Streaming Sites</h1><br>
+        </center>
+        <div class="streaming-sites">
+            <div class="site"
+                style="background-color: black; border-radius: 8px; padding: 10px;margin-right: 20px;margin-left: 20px;">
+                <h2 class="site-heading Skysports"><a href="https://www.skysports.com/get-sky"
+                        target="_blank">Sky Sports</a>
+                </h2>
+                <div class="site-content">
+                    <div class="site-info">
+                        <p>Sky Sports are the go-to broadcaster for millions of football fans, with the broadcaster
+                            covering
+                            a
+                            plethora of top-class action including the Premier League, English Football League and
+                            Bundesliga. Subscribers can watch live football streams throughout the year via the Sky Go
+                            app,
+                            which is
+                            available to customers at no extra cost.</p>
+                    </div>
+                    <div class="site-image">
+                        <img src="sky1.jpg" alt="Skysports Image">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="site"
+                style="background-color: black; border-radius: 8px; padding: 10px;margin-right: 20px;margin-left: 20px;">
+                <h2 class="site-heading btsports"><a href="https://www.bt.com/sport/buy" target="_blank">BT Sports</a>
+                </h2>
+                <div class="site-content">
+                    <div class="site-info">
+                        <p>BT Sport is the place to be for UEFA's club competitions, with the Champions League, Europa
+                            League and Europa Conference League all available to stream on their app.
+
+                            The company also holds the rights to selected live Premier League matches, the FA Cup, Ligue
+                            1,
+                            Serie A and more, making them a must-have service for every football fan.</p>
+                    </div>
+                    <div class="site-image">
+                        <img src="bt.jpg" alt="BTsports Image">
+                    </div>
+                </div>
+            </div>
+
+            <div class="site"
+                style="background-color: black; border-radius: 8px; padding: 10px;margin-right: 20px;margin-left: 20px;">
+                <h2 class="site-heading ESPN"><a href="https://www.espn.in/football/" target="_blank">ESPN</a></h2>
+                <div class="site-content">
+                    <div class="site-info">
+                        <p>ESPN is one of the leading sports media companies in the world. It offers a variety of live
+                            sports streaming options, including football.
+
+                            It has a free streaming service, Watch ESPN, that has some live football games available;
+                            however, it also has tons of other awesome content like highlights, replays, and news.To
+                            start watching live football games on Watch ESPN, all you need to do is create an account
+                            and sign in with your TV provider login information. And if you don’t have a TV provider,
+                            you can try out ESPN+ for free! ESPN+ has even more live football games to choose from, plus
+                            lots of other great sports content.<br><br>Join the ESPN football community as it unites
+                            fans
+                            from every corner of the globe in celebrating the world’s most beloved sport!</p>
+                    </div>
+                    <div class="site-image">
+                        <img src="espn.jpg" alt="ESPN Image">
+                    </div>
+                </div>
+            </div>
+
+            <div class="site"
+                style="background-color: black; border-radius: 8px; padding: 10px;margin-right: 20px;margin-left: 20px;">
+                <h2 class="site-heading TNTsports"><a href="https://www.tntsports.co.uk/football/" target="_blank">TNT
+                        sports</a></h2>
+                <div class="site-content">
+                    <div class="site-info">
+                        <p>Get breaking football news and live match updates from TNT Sports. Get the latest football
+                            news
+                            headlines from the Premier League, Serie A, Bundesliga, Ligue 1, Champions League and more.
+                            Eurosport brings you live match updates including football results, interviews, commentary
+                            and expert analysis.</p>
+                    </div>
+                    <div class="site-image">
+                        <img src="tnt.jpg" alt="TNT sports Image">
+                    </div>
+                </div>
+            </div>
+
+            <div class="site"
+                style="background-color: black; border-radius: 8px; padding: 10px;margin-right: 20px;margin-left: 20px;">
+                <h2 class="site-heading BEINsports"><a href="https://www.beinsports.com/" target="_blank">BEIN
+                        sports</a>
+                </h2>
+                <div class="site-content">
+                    <div class="site-info">
+                        <p>Unveil the world of sports with beIN SPORTS USA. Get exclusive highlights, latest news,
+                            stats,
+                            scores, and schedules for major football leagues and more. <br><br>
+                            beIN Sports is the dominant television sports channel in the MENA region. It also operates
+                            channels in France, the United States, Canada, Australia, New Zealand, Turkey, Hong Kong,
+                            Singapore, Brunei, Malaysia, Indonesia, Philippines and Thailand.</p>
+                    </div>
+                    <div class="site-image">
+                        <img src="bein.jpg" alt="BEIN sports Image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <div class="history-section" id="history">
+        <div class="history-rectangle">
+            <h2>World Cup History</h2>
+            <p>The most recent FIFA World Cup took place in 2022 in Qatar, with
+                Argentina emerging as the winners by defeating France on penalties in an epic final. The next World Cup
+                is scheduled for 2026 in USA.
+                Previuos winners include France in 2018, Germany in 2014. Spain triumphed in 2010 while Italy defeated
+                France in 2006 to win the Fifa World Cup.</p>
+            <div class="site-image">
+                <video src="vid1.mp4" alt="World Cup Image" autoplay loop controls height="250" width="400"></video>
+            </div>
+        </div>
+
+        <div class="history-rectangle">
+            <h2>Ballon d'Or History</h2>
+            <p> The Ballon dor is considered as the most prestigious individual award in football. The award is given by
+                the France Football Federation. Messi and Cristiano Ronaldo have dominated the Ballon d'Or awards for
+                several years. Lionel Messi
+                holds the record for the most Ballon dors in the history of the game triumphing 8 times. He won his most
+                recent one, eighth, in 2023 for winning the World Cup. Cristiano Ronaldo has 5 Ballon dors in his vast
+                individual trophies
+                cabinet.
+
+            <div class="site-image">
+                <img src="lm8.jpg" alt="Ballon d'Or Image" width="350">
+            </div>
+        </div>
+
+        <div class="history-rectangle">
+            <h2>Top Goalscorers in History</h2>
+
+            There have been many prolific goalscorers in the history of the game.
+
+            The portuguese superstar Cristiano Ronaldo is the all-time highest goal scorer in the world with 869 offical
+            goals.
+
+            He is followed by the Argentine Lionel Messi with 821 official goals.
+
+            The austrian Josef Bican closes the podium with 805 goals.
+            <br>
+            <div class="site-image">
+                <img src="cristiano-ronaldo-1.webp" alt="Top Goalscorers Image" width="370" style="margin-top: 40px;" >
+            </div>
+        </div>
+    </div>
+
+   
+
+    <div id="about" class="box-container"
+        style="background-color: #333; border-radius: 8px; padding: 20px; margin: 20px;">
+        <h1 style="color: green;">About FootyWorld</h1>
+        <p style="color: white;">
+            FootyWorld is your ultimate destination for the latest news and updates on the biggest football games. We
+            strive to bring you comprehensive coverage of the football world, from thrilling matches to the stories
+            behind the players. Whether it's the excitement of live events or insights into the history and achievements
+            of the sport, FootyWorld is your go-to source for everything football.
+        </p>
+    </div>
+    
+    <footer id="contact">
+        <div>Contact Details:</div>
+        <p>Email: contact@footyworld.com</p>
+        <p>Phone: +1 123 456 7890</p>
+        <p>All rights reserved &copy; 2023 FootyWorld</p>
+    </footer>
+</body>
+
+</html>
